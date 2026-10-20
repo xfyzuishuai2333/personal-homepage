@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小明的个人主页</title>
+  <meta name="description" content="个人展示网站：关于我、技能、项目与博客">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌌</text></svg>">
+</head>
+<body>
+  <canvas id="starCanvas" aria-hidden="true"></canvas>
+
+  <!-- 吸顶导航 -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">🌌 <span id="navName">小明</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#blog">博客</a>
+        <a href="#contact">联系</a>
+        <a href="admin.html" class="nav-admin">后台</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-avatar" id="heroAvatar">👨‍💻</div>
+      <h1 class="hero-name" id="heroName">小明</h1>
+      <p class="hero-title" id="heroTitle">软件工程学生 · 前端开发爱好者</p>
+      <p class="hero-tagline" id="heroTagline">用代码构建有趣的东西。</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">查看项目</a>
+        <a href="#contact" class="btn btn-ghost">联系我</a>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section" id="about">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-grid">
+        <div class="card about-card">
+          <p id="aboutText"></p>
+          <p class="about-location">📍 <span id="aboutLocation"></span></p>
+        </div>
+        <div class="card timeline-card">
+          <h3>经历</h3>
+          <ul class="timeline" id="timelineList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="section" id="skills">
+      <h2 class="section-title">技能</h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- 项目 -->
+    <section class="section" id="projects">
+      <h2 class="section-title">项目</h2>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- 博客 -->
+    <section class="section" id="blog">
+      <h2 class="section-title">博客</h2>
+      <div class="posts-list" id="postsList"></div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="section" id="contact">
+      <h2 class="section-title">联系我</h2>
+      <div class="card contact-card">
+        <p>如果你想交流技术、合作或者打个招呼：</p>
+        <div class="contact-actions">
+          <button class="btn btn-primary" id="copyEmailBtn">📧 复制邮箱</button>
+          <a class="btn btn-ghost" id="githubLink" href="#" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+        <p class="copy-tip" id="copyTip" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 <span id="footerName">小明</span> · 由 Canvas 星空与纯手写代码驱动</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

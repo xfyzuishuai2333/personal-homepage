@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>后台管理 · 个人主页</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚙️</text></svg>">
+</head>
+<body>
+  <canvas id="starCanvas" aria-hidden="true"></canvas>
+
+  <!-- 登录框 -->
+  <div class="login-box card" id="loginBox">
+    <h1 style="font-size:1.3rem;">⚙️ 后台管理</h1>
+    <p style="color:var(--text-muted);font-size:0.85rem;margin-top:6px;">请输入管理密码（默认 admin123）</p>
+    <input type="password" id="pwdInput" placeholder="密码" class="field" style="width:100%;padding:10px 12px;border-radius:10px;background:rgba(0,0,0,0.25);border:1px solid var(--card-border);color:var(--text);">
+    <button class="btn btn-primary" id="loginBtn" style="width:100%;">进入后台</button>
+    <p id="loginTip" style="color:#ff8585;font-size:0.82rem;margin-top:10px;min-height:1.2em;"></p>
+    <p style="margin-top:16px;"><a href="index.html" style="color:var(--accent);font-size:0.85rem;">← 返回首页</a></p>
+  </div>
+
+  <!-- 管理面板 -->
+  <div class="admin-wrap" id="adminPanel" hidden>
+    <div class="admin-header">
+      <h1>⚙️ 内容管理</h1>
+      <div class="admin-actions">
+        <a href="index.html" class="btn btn-ghost btn-small">👁 查看前台</a>
+        <button class="btn btn-danger btn-small" id="resetBtn">↺ 恢复默认数据</button>
+      </div>
+    </div>
+
+    <form id="adminForm">
+      <!-- 个人信息 -->
+      <div class="card admin-section">
+        <h2>👤 个人信息</h2>
+        <div class="dyn-grid-2">
+          <div class="field"><label>姓名</label><input id="fName"></div>
+          <div class="field"><label>职位 / 身份</label><input id="fTitle"></div>
+        </div>
+        <div class="field"><label>一句话介绍</label><input id="fTagline"></div>
+        <div class="field"><label>个人简介（关于我）</label><textarea id="fAbout" rows="4"></textarea></div>
+        <div class="dyn-grid-2">
+          <div class="field"><label>邮箱</label><input id="fEmail"></div>
+          <div class="field"><label>所在地</label><input id="fLocation"></div>
+        </div>
+        <div class="field"><label>GitHub 链接</label><input id="fGithub"></div>
+      </div>
+
+      <!-- 经历 -->
+      <div class="card admin-section">
+        <h2>🕐 经历时间线</h2>
+        <div id="timelineItems"></div>
+        <button type="button" class="btn btn-ghost btn-small" id="addTimeline">＋ 添加经历</button>
+      </div>
+
+      <!-- 技能 -->
+      <div class="card admin-section">
+        <h2>🛠️ 技能</h2>
+        <div id="skillItems"></div>
+        <button type="button" class="btn btn-ghost btn-small" id="addSkill">＋ 添加技能</button>
+      </div>
+
+      <!-- 项目 -->
+      <div class="card admin-section">
+        <h2>📦 项目</h2>
+        <div id="projectItems"></div>
+        <button type="button" class="btn btn-ghost btn-small" id="addProject">＋ 添加项目</button>
+      </div>
+
+      <!-- 博客 -->
+      <div class="card admin-section">
+        <h2>📝 博客文章</h2>
+        <div id="postItems"></div>
+        <button type="button" class="btn btn-ghost btn-small" id="addPost">＋ 添加文章</button>
+      </div>
+
+      <!-- 保存栏 -->
+      <div class="save-bar">
+        <button type="submit" class="btn btn-primary">💾 保存全部修改</button>
+        <a href="index.html" class="btn btn-ghost">取消并返回</a>
+      </div>
+      <p class="save-tip" id="saveTip"></p>
+    </form>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
