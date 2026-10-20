@@ -6,18 +6,18 @@ const STORAGE_KEY = 'ph_site_data_v1';
 // 默认数据（首次访问或恢复默认时使用）
 const DEFAULT_DATA = {
   profile: {
-    name: '小明',
-    title: '软件工程学生 · 前端开发爱好者',
+    name: '许飞扬',
+    title: '大连海事大学 · 软件工程专业 2023级',
     tagline: '用代码构建有趣的东西，用好奇心探索技术的边界。',
-    about: '你好！我是一名软件工程专业的学生，热爱前端开发与 AI 工具应用。平时喜欢折腾浏览器扩展、静态网站和各类效率工具。目前正在系统学习软件工程实践，希望把课堂知识变成真正上线的产品。这个网站展示了我最近做的一些小项目和学习记录。',
+    about: '你好！我是许飞扬，大连海事大学2023级软件工程专业学生，来自山西大同。热爱前端开发与 AI 工具应用，平时喜欢折腾浏览器扩展、静态网站和各类效率工具，希望把课堂知识变成真正上线的产品。这个网站展示了我最近做的一些小项目和学习记录。',
     email: 'hello@example.com',
     github: 'https://github.com/xfyzuishuai2333',
-    location: '中国 · 大连'
+    location: '山西大同 · 现居大连'
   },
   timeline: [
-    { period: '2024 — 至今', event: '软件工程专业在读，系统学习软件工程与项目管理' },
+    { period: '2023', event: '考入大连海事大学，就读软件工程专业' },
     { period: '2025', event: '开始前端开发学习，完成多个静态网站项目' },
-    { period: '2026', event: '学习 AI 辅助编程，用 Cline/Trae 完成实训项目并部署上线' }
+    { period: '2026', event: '学习 AI 辅助编程，完成实训项目并部署上线' }
   ],
   skills: [
     { category: '前端', name: 'HTML / CSS', level: 90 },
